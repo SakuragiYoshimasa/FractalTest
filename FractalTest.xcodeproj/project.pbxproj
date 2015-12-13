@@ -27,6 +27,7 @@
 		E7E077E815D3B6510020DFD4 /* QTKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7E077E715D3B6510020DFD4 /* QTKit.framework */; };
 		E7F985F815E0DEA3003869B5 /* Accelerate.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = E7F985F515E0DE99003869B5 /* Accelerate.framework */; };
 		FAB941A91C1D12B50004CEB9 /* SierpinskiGasket.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAB941A71C1D12B50004CEB9 /* SierpinskiGasket.cpp */; };
+		FAEBF3B41C1DC2FC00635B10 /* FractalTest.cpp in Sources */ = {isa = PBXBuildFile; fileRef = FAEBF3B21C1DC2FC00635B10 /* FractalTest.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +86,8 @@
 		E7F985F515E0DE99003869B5 /* Accelerate.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Accelerate.framework; path = /System/Library/Frameworks/Accelerate.framework; sourceTree = "<absolute>"; };
 		FAB941A71C1D12B50004CEB9 /* SierpinskiGasket.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = SierpinskiGasket.cpp; sourceTree = "<group>"; };
 		FAB941A81C1D12B50004CEB9 /* SierpinskiGasket.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SierpinskiGasket.h; sourceTree = "<group>"; };
+		FAEBF3B21C1DC2FC00635B10 /* FractalTest.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = FractalTest.cpp; sourceTree = "<group>"; };
+		FAEBF3B31C1DC2FC00635B10 /* FractalTest.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FractalTest.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -188,6 +191,8 @@
 				E4B69E1F0A3A1BDC003C02F2 /* ofApp.h */,
 				FAB941A71C1D12B50004CEB9 /* SierpinskiGasket.cpp */,
 				FAB941A81C1D12B50004CEB9 /* SierpinskiGasket.h */,
+				FAEBF3B21C1DC2FC00635B10 /* FractalTest.cpp */,
+				FAEBF3B31C1DC2FC00635B10 /* FractalTest.h */,
 			);
 			path = src;
 			sourceTree = SOURCE_ROOT;
@@ -289,6 +294,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				E4B69E200A3A1BDC003C02F2 /* main.cpp in Sources */,
+				FAEBF3B41C1DC2FC00635B10 /* FractalTest.cpp in Sources */,
 				E4B69E210A3A1BDC003C02F2 /* ofApp.cpp in Sources */,
 				FAB941A91C1D12B50004CEB9 /* SierpinskiGasket.cpp in Sources */,
 			);
