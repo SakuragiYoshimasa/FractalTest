@@ -1,5 +1,6 @@
 #include "ofApp.h"
 #include <complex>
+#include "SierpinskiGasket.h"
 
 //set0
 /*complex<double> A = complex<double>(0.5, sqrt(3.0) / 6.0);
@@ -52,17 +53,18 @@ complex<double> f1(complex<double> z){
 
 vector< complex<double> > CSpace;
 ofMesh mesh;
+
+SierpinskiGasket sierpinskiGasket;
 //--------------------------------------------------------------
 void ofApp::setup(){
     ofBackground(0);
-    //sierpinskiGasket.setup();
+    sierpinskiGasket.setup();
 
 
     complex<double> z0 = complex<double>(0, 0);
     CSpace.push_back(z0);
     
-    
-    for(int i = 0; i < 20; i++){
+    for(int i = 0; i < 15; i++){
         vector< complex< double> > newCSapce = vector< complex<double> >(0);
         for(int k = 0; k < CSpace.size(); k++){
             newCSapce.push_back(f0(CSpace.at(k)));
@@ -73,29 +75,28 @@ void ofApp::setup(){
     for(int i = 0; i < CSpace.size(); i++){
         mesh.addVertex(ofPoint(CSpace.at(i).real() * 400,CSpace.at(i).imag() * 400));
     }
-    
     mesh.setMode(OF_PRIMITIVE_POINTS);
 }
 
 void ofApp::update(){
-    //sierpinskiGasket.update();
+    sierpinskiGasket.update();
 }
 
 //--------------------------------------------------------------
 void ofApp::draw(){
     //ofSetColor(0, 255, 0);
-    //sierpinskiGasket.draw();
+    sierpinskiGasket.draw();
     
-    ofPushMatrix();
+    /*ofPushMatrix();
     ofSetColor(0,255,0);
     ofTranslate(ofGetWidth()/2 - 300, ofGetHeight()/2 );
     mesh.draw();
-    ofPopMatrix();
+    ofPopMatrix();*/
 }
 
 //--------------------------------------------------------------
 void ofApp::keyPressed(int key){
-    //if(key == ' ') sierpinskiGasket.reset();
+    if(key == ' ') sierpinskiGasket.reset();
 }
 
 //--------------------------------------------------------------

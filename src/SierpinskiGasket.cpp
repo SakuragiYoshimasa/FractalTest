@@ -20,9 +20,9 @@ void SierpinskiGasket::update(){
         mesh.addColor(ofColor::fromHsb(ofRandom(255), 255, 255));
     }
     for(int i = mesh.vertices.size() / 3 - 1; i >= 0 ; i--){
-        ofPoint p1 = (mesh.vertices.at(i * 3) + mesh.vertices.at(i * 3 + 1))/ 2.0;
-        ofPoint p2 = (mesh.vertices.at(i * 3) + mesh.vertices.at(i * 3 + 2))/ 2.0;
-        ofPoint p3 = (mesh.vertices.at(i * 3 + 1) + mesh.vertices.at(i * 3 + 2))/ 2.0;
+        ofPoint p1 = (mesh.getVertices().at(i * 3) + mesh.getVertices().at(i * 3 + 1))/ 2.0;
+        ofPoint p2 = (mesh.getVertices().at(i * 3) + mesh.getVertices().at(i * 3 + 2))/ 2.0;
+        ofPoint p3 = (mesh.getVertices().at(i * 3 + 1) + mesh.getVertices().at(i * 3 + 2))/ 2.0;
         
         mesh.getVertices().insert(mesh.vertices.begin() + i * 3 + 2, p2);
         mesh.getVertices().insert(mesh.vertices.begin() + i * 3 + 2, p3);
@@ -44,6 +44,8 @@ void SierpinskiGasket::draw(){
 }
 
 void SierpinskiGasket::reset(){
+    generation = 0;
+    frame = 0;
     mesh.clear();
     mesh.addVertex(ofPoint(-400, 0));
     mesh.addVertex(ofPoint(400, 0));
