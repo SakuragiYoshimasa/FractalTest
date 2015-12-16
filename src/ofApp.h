@@ -1,7 +1,7 @@
 #pragma once
 
 #include "ofMain.h"
-
+#include "ofxGui.h"
 
 class ofApp : public ofBaseApp{
 
@@ -20,5 +20,16 @@ class ofApp : public ofBaseApp{
 		void dragEvent(ofDragInfo dragInfo);
 		void gotMessage(ofMessage msg);
     
+    ofxPanel panel;
+    ofxFloatSlider AReal;
+    ofxFloatSlider AImag;
     
+    ofxFloatSlider BReal;
+    ofxFloatSlider BImag;
+    
+    ofxFloatSlider CReal;
+    ofxFloatSlider CImag;
+    
+    ofxFloatSlider DReal;
+    ofxFloatSlider DImag;
 };
